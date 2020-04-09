@@ -26,6 +26,8 @@ jobs:
     - name: Install dependencies
       run: |
         npm install
-    - name: Test with pytest
+    - name: Check build
       run: |
         node index.js
+      env:
+        TOKEN: ${{ secrets.GITHUB_TOKEN }}
